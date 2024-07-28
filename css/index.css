@@ -1,0 +1,45 @@
+* {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px;
+    gap: 8px;
+    border-radius: 8px;
+
+    background-color: rgba(112, 112, 255, 0.66);
+    border: 1px solid blue;
+}
+
+form select {
+    width: 100%;
+}
+
+input, select{
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+button {
+    background-color: white;
+    color: black;
+    padding: 8px 0;
+    border-radius: 4px;
+}
