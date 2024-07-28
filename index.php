@@ -39,8 +39,9 @@
                 </select>
             </label>
 
-            <button>Submit</button>
+            <button type="submit" name="submitForm">Submit</button>
         </form>
     </main>
+
 </body>
 </html>
