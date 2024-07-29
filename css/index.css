@@ -15,7 +15,7 @@ main {
     height: 100vh;
 }
 
-form {
+#initial-form {
     display: flex;
     flex-direction: column;
 
@@ -40,6 +40,15 @@ input, select{
 button {
     background-color: white;
     color: black;
-    padding: 8px 0;
+    padding: 8px;
     border-radius: 4px;
+}
+
+th {
+    background-color: blueviolet;
+}
+
+th, td {
+    padding: 10px 16px;
+    border: 1px solid white;
 }

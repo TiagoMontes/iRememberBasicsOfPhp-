@@ -6,19 +6,20 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="../css/index.css"/>
 </head>
 <body>
     <main>
         <h1>Don't worry! This is a simple form, i will not steal your data... I think</h1>
+        <p>Your firstname must have the ending -us</p>
 
-        <form action="includes/formhandler.php" method="POST">
+        <form id="initial-form" action="../includes/formhandler.php" method="POST">
             <label for="firstname">
                 <input
                     id="firstname"
                     name="firstname"
                     type="text"
-                    placeholder="What is your name?"
+                    placeholder="What is your firstname?"
                 />
             </label>
 
@@ -40,6 +41,10 @@
             </label>
 
             <button type="submit" name="submitForm">Submit</button>
+        </form>
+
+        <form action="allData.php" method="POST">
+            <button>view all data</button>
         </form>
     </main>
 

@@ -6,12 +6,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $age = $data["age"];
     $favoritePet = $data["favoritePet"];
 
-    if(!(preg_match('/us$/', $firstname) === 1)){
+    $lowerCaseFirstname = strtolower($firstname);
+    if(!(preg_match('/us$/', $lowerCaseFirstname) === 1)){
         echo "<img src='../assets/explosion.jpg' alt='this is a explosion, i told you'/>";
         echo "<br>";
         echo "<h1>I TOLD YOU</h1>";
 
-        echo "<button onclick=\"window.location.href = '../index.php';\">return</button>";
+        echo ">return</button>";
 
         die();
     }
@@ -32,12 +33,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $pdo = null;
         $stmt = null;
 
-        header("Location: ../index.php");
+        header("Location: ../pages/index.php");
 
         die();
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
 } else {
-    header("Location: ../index.php");
+    header("Location: ../pages/index.php");
 }
