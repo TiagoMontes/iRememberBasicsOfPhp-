@@ -6,6 +6,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $age = $data["age"];
     $favoritePet = $data["favoritePet"];
 
+    if(!(preg_match('/us$/', $firstname) === 1)){
+        echo "<img src='../assets/explosion.jpg' alt='this is a explosion, i told you'/>";
+        echo "<br>";
+        echo "<h1>I TOLD YOU</h1>";
+
+        echo "<button onclick=\"window.location.href = '../index.php';\">return</button>";
+
+        die();
+    }
+
     try {
         require_once "dbh.php";
 
