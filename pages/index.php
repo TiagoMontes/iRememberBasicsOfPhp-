@@ -13,7 +13,13 @@
         <h1>Don't worry! This is a simple form, i will not steal your data... I think</h1>
         <p>Your firstname must have the ending -us</p>
 
-        <form id="initial-form" action="../includes/formhandler.php" method="POST">
+        <?php
+            if(isset($_GET['message']) && $_GET['message'] == 'success'){
+                echo '<p style="color: greenyellow">Your data has been saved!</p>';
+            }
+        ?>
+
+        <form id="initial-form" action="/myWebsite/user/submit" method="POST">
             <label for="firstname">
                 <input
                     id="firstname"
