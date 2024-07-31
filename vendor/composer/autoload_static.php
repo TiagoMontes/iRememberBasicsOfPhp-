@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInitb3342df8d9746fb78650561bda54f57b
 {
     public static $prefixLengthsPsr4 = array (
+        'C' => 
+        array (
+            'Config\\' => 7,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -14,6 +18,10 @@ class ComposerStaticInitb3342df8d9746fb78650561bda54f57b
     );
 
     public static $prefixDirsPsr4 = array (
+        'Config\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/config',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -21,7 +29,10 @@ class ComposerStaticInitb3342df8d9746fb78650561bda54f57b
     );
 
     public static $classMap = array (
+        'App\\Controller\\UserController' => __DIR__ . '/../..' . '/src/Controller/UserController.php',
+        'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Config\\DBConnection\\Database' => __DIR__ . '/../..' . '/config/DBConnection/Database.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

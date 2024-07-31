@@ -1,8 +1,6 @@
 <?php
 
-require_once '../src/Controller/UserController.php';
-require_once '../vendor/autoload.php';
-
+require_once dirname(__DIR__) . '/bootstrap.php';
 use App\Controller\UserController;
 
 $requestUri = str_replace('/myWebsite', '', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
