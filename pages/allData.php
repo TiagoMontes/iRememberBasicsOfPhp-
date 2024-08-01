@@ -11,7 +11,7 @@
 <body>
     <main>
         <?php
-        require_once "../includes/getAllUsers.php";
+        require_once "../Repository/getAllUsers.php";
 //        TODO - use this to print the array
 //        foreach($result as $row){
 //            echo '<pre>';print_r($row); echo '</pre>';
