@@ -3,7 +3,6 @@ namespace App\Controller;
 
 use App\Entity\User;
 use Config\DBConnection\Database;
-use PDOException;
 
 class UserController {
     public function handleFormSubmission()
