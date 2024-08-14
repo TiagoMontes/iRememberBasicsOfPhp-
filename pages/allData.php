@@ -11,20 +11,27 @@
 <body>
     <main>
         <?php
-        require_once "../Repository/getAllUsers.php";
+
+        use App\Controller\UserController;
+
+        require_once "../src/Controller/UserController.php";
+
+        $userController = new UserController();
+        $allUsers = $userController->getAllUsers();
+
 //        TODO - use this to print the array
 //        foreach($result as $row){
 //            echo '<pre>';print_r($row); echo '</pre>';
 //        }
 
 
-        if(empty($result)){
+        if(empty($allUsers)){
             echo "<div>";
             echo "<h1>there are no results!</h1>";
             echo "</div>";
         }
 
-        if(!empty($result)){
+        if(!empty($allUsers)){
             echo "<div>";
             echo "<table id='table-users'>";
             echo "<tr>";
@@ -34,7 +41,7 @@
             echo "<th>Favorite Pet</th>";
 
             echo "</tr>";
-            foreach($result as $row){
+            foreach($allUsers as $row){
                 echo "<tr>";
                 echo "<td>" . $row['id'] . "</td>";
                 echo "<td>" . $row['firstname'] . "</td>";

@@ -18,13 +18,12 @@ $routes = [
 ];
 
 if (isset($routes[$requestMethod][$requestUri])) {
-    $route = $routes[$requestMethod][$requestUri];
-    if (is_callable($route)) {
-        $route();
+    $callback = $routes[$requestMethod][$requestUri];
+    if (is_callable($callback)) {
+        $callback();
     } else {
-        $controller = new $route[0];
-        $method = $route[1];
-        $controller->$method();
+        [$class, $method] = $callback;
+        (new $class)->$method();
     }
 } else {
     header("HTTP/1.0 404 Not Found");
